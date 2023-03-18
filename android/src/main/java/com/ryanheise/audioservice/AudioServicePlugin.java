@@ -66,6 +66,7 @@ public class AudioServicePlugin implements FlutterPlugin, ActivityAware {
         return flutterEngineId;
     }
     public static synchronized FlutterEngine getFlutterEngine(Context context) {
+        new Exception().printStackTrace(); // INSERT THIS LINE
         FlutterEngine flutterEngine = FlutterEngineCache.getInstance().get(flutterEngineId);
         if (flutterEngine == null) {
             // XXX: The constructor triggers onAttachedToEngine so this variable doesn't help us.
